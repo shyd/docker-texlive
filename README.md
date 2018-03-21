@@ -8,11 +8,10 @@ Docker image with TeX Live full and additional `git` and `curl` to work with Cir
 ## Additional support for
 
 - CircleCI
-- eps-to-pdf
 
 ## Usage
 
-Run with `docker run -ti --rm --name texlive -v $(pwd):/work shyd/texlive pdflatex my-awesome-book.tex`.
+Run with `docker run -ti --rm --name texlive -v $(pwd):/texlive/work shyd/texlive pdflatex my-awesome-book.tex`.
 
 ## References
 
