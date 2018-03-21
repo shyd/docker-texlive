@@ -8,10 +8,12 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN update-texmf && \
     texhash
 
-
 RUN useradd -md /texlive texlive
-USER texlive
-WORKDIR /texlive/work
 
+USER texlive
+
+RUN mkdir -p /texlive/work
 RUN mkdir -p /texlive/texmf
 COPY libraries /texlive/texmf
+
+WORKDIR /texlive/work
